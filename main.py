@@ -112,7 +112,3 @@ if __name__ == "__main__":
         filtered_files, pdf_files = extract_files(current_directory, zip_files)
         converted_files = convert_pandoc(filtered_files)
         send_email(converted_files)
-
-
-
-
