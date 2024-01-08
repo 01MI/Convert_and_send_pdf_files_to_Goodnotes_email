@@ -25,7 +25,9 @@ There are 2 commands:
 
 1. The following command will convert any files in the current directory and subdirectories.\
    It will extract zips in a folder and convert their files(directory and subdirectories).
-   
+    ```bash
+   python3 main.py
+   ```
    Example:
    <table>
       <tr>
