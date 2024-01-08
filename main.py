@@ -10,7 +10,6 @@ def send_email(files):
         load_dotenv(os.path.join(BASEDIR, '.env'))
 
         email_sender = os.getenv("EMAIL_SENDER")
-        email_service = os.getenv("EMAIL_SERVICE")
         email_password = os.getenv("EMAIL_PASSWORD")
         email_receiver = os.getenv("EMAIL_RECEIVER")
 
@@ -36,7 +35,7 @@ def send_email(files):
                     message.attach(pdf)
                 server.sendmail(email_sender, email_receiver, message.as_string())
                 server.quit()
-            print("email sent!")
+            print("Email sent!")
         except smtplib.SMTPException as e:
             print(f"An error occured while sending the email: {e}")
         except Exception as e:
