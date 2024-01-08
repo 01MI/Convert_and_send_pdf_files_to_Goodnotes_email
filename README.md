@@ -29,13 +29,18 @@ There are 2 commands:
    Example:
    <table>
       <tr>
-        <td valign="middle"><img src="https://github.com/01MI/convert-and-send-pdf-files-to-goodnotes-email/assets/151965188/194dd68c-afa3-428f-9d38-cc21b896e5b3"></td>
-        <td valign="middle"><img src="https://github.com/01MI/convert-and-send-pdf-files-to-goodnotes-email/assets/151965188/51beda88-68d2-4f78-abc0-c872b6133915"></td>
-        <td valign="middle"><img src="https://github.com/01MI/convert-and-send-pdf-files-to-goodnotes-email/assets/151965188/4da23303-d4e2-4759-9508-2519744437c8"></td>
+         <td valign="middle"><img src="https://github.com/01MI/convert-and-send-pdf-files-to-goodnotes-email/assets/151965188/51beda88-68d2-4f78-abc0-c872b6133915" width="900"></td>
+      </tr>
+   </table>
+   <table>
+      <tr>
+        <td align="middle"><img src="https://github.com/01MI/convert-and-send-pdf-files-to-goodnotes-email/assets/151965188/194dd68c-afa3-428f-9d38-cc21b896e5b3"></td>
+        <td align="middle"><img src="https://github.com/01MI/convert-and-send-pdf-files-to-goodnotes-email/assets/151965188/4da23303-d4e2-4759-9508-2519744437c8"></td>
       </tr>
    </table>
 
-2. You can decide to only send already converted PDFs files using the argument "-send-only".
+
+3. You can decide to only send already converted PDFs files using the argument "-send-only".
    This following command will look for any PDFs files in the current directory and subdirectories.\
    It will extract files from zips to look for PDFs files.
    ```bash
