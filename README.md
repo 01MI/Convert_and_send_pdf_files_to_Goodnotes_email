@@ -3,7 +3,7 @@
 ## Context
 
 Goodnotes is a note-taking app with a functionnality that allows users to send PDFs files(only) to their goodnotes app using a private goodnotes email.
-This script allows you to convert and send images and documents to your goodnotes email with your gmail account.
+This script allows you to convert and send images/documents from your gmail address to your goodnotes email address.
 
 This script uses img2pdf and pandoc for the conversion part, you will find a list of supported input formats below.\
 For zips, it only supports zips and cannot extract nested zips.
