@@ -44,7 +44,7 @@ There are 2 commands:
    This following command will look for any PDFs files in the current directory and subdirectories.\
    It will extract files from zips to look for PDFs files.
    ```bash
-   python3 main.py
+   python3 main.py -send-only
    ```
    Exemple:
    <table>
