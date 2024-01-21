@@ -3,17 +3,17 @@
 ## Context
 
 Goodnotes is a note-taking app with a functionnality that allows users to send PDFs files(only) to their goodnotes app using a private goodnotes email.\
-This script allows you to convert and send images/documents from your gmail address to your goodnotes email address.
+This script allows you to convert and send all your images/documents in one email from your gmail address to your goodnotes email address.
 
 This script uses img2pdf and pandoc for the conversion part, you will find a list of supported input formats below.\
-For zips, it only supports zips and cannot extract nested zips.
+For archives, it only supports .zip and cannot extract nested archives.
 
 ## Prerequisites
 1. You will need to install the dependencies specified in requirements.txt
 2. You will need to create a .env file with the following informations.\
    I recommand creating a new gmail account for this usage.
    ```
-   EMAIL_SENDER = your gmail
+   EMAIL_SENDER = your gmail address
    EMAIL_PASSWORD = your gmail password
    EMAIL_RECEIVER = your goodnotes email
    ```
@@ -44,7 +44,7 @@ There are 2 commands:
 
 3. You can decide to only send already converted PDFs files using the argument "-send-only".
    This following command will look for any PDFs files in the current directory and subdirectories.\
-   It will extract files from zips to look for PDFs files.
+   It will extract files from s to look for PDFs files.
    ```bash
    python3 main.py -send-only
    ```
@@ -89,8 +89,8 @@ Table of inputs format from Pandoc User's Guide https://pandoc.org/MANUAL.html :
 ## To do
 
 1. Support for other email providers.
-2. Support for other types of archives, currently it only supports zips.
-3. Support for nested zips.
+2. Support for other types of archives, currently it only supports .zip.
+3. Support for nested archives.
 
 
 
