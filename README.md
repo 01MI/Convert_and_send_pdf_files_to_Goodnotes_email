@@ -44,7 +44,7 @@ There are 2 commands:
 
 3. You can decide to only send already converted PDFs files using the argument "-send-only".
    This following command will look for any PDFs files in the current directory and subdirectories.\
-   It will extract files from s to look for PDFs files.
+   It will extract files from zips to look for PDFs files.
    ```bash
    python3 main.py -send-only
    ```
@@ -67,9 +67,9 @@ There are 2 commands:
 
 ## Conversion formats
 
-Here are the following inputs files supported by this script:\
+Here are the following input formats supported by this script:\
 For Img2pdf:\
-Table of inputs format from https://pypi.org/project/img2pdf/ : 
+Table of input formats from https://pypi.org/project/img2pdf/ : 
 <table>
    <tr>
       <td valign="middle"><img src="https://github.com/01MI/convert-and-send-pdf-files-to-goodnotes-email/assets/151965188/f4ec4b68-a10d-450f-b7b2-532dcc7aeb69"></td>
@@ -77,7 +77,7 @@ Table of inputs format from https://pypi.org/project/img2pdf/ :
 </table>
 
 For Pandoc:\
-Table of inputs format from Pandoc User's Guide https://pandoc.org/MANUAL.html :
+Table of input formats from Pandoc User's Guide https://pandoc.org/MANUAL.html :
 <table>
    <tr>
       <td valign="middle"><img src="https://github.com/01MI/convert-and-send-pdf-files-to-goodnotes-email/assets/151965188/cd66ed21-a0fe-418e-ae96-409860ff0fdf"></td>
