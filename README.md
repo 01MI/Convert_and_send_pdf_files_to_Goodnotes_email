@@ -2,29 +2,32 @@
 
 ## Context
 
-Goodnotes is a note-taking app with a functionnality that allows users to send PDFs files(only) to their goodnotes app using a private goodnotes email.\
-This script allows you to convert and send all your images/documents in one email from your gmail address to your goodnotes email address.
+Goodnotes is a note-taking app that includes a feature allowing users to send PDF files to the app via a private Goodnotes email address. Only PDF files are accepted through this feature.\
+This script lets you convert and send multiple images or documents in a single email from your Gmail account to your Goodnotes email address..
 
-This script uses img2pdf and pandoc for the conversion part, you will find a list of supported input formats below.\
-For archives, it only supports .zip and cannot extract nested archives.
+It uses img2pdf and pandoc for file conversion. You’ll find a list of supported input formats below.\
+For archive files, only .zip is supported, and the script cannot extract nested archives.
 
 ## Prerequisites
-1. You will need to install the dependencies specified in requirements.txt
-2. You will need to create a .env file with the following informations.\
-   I recommand creating a new gmail account for this usage.
+1. You will need to install the dependencies listed in requirements.txt
    ```
-   EMAIL_SENDER = your gmail address
-   EMAIL_PASSWORD = your gmail password
+   pip3 install -r requirements.txt
+   ```
+3. You will need to create a .env file with the following information.\
+   I recommand creating a separate Gmail account for this purpose.
+   ```
+   EMAIL_SENDER = your Gmail address
+   EMAIL_PASSWORD = your Gmail password
    EMAIL_RECEIVER = your goodnotes email
    ```
 
 ## Usage
 
-You will need to move this script and .env in the same directory where are located the files you want to convert and send.\
+You will need to place this script and the .env file in the same directory as the files you want to convert and send.\
 There are 2 commands:
 
-1. The following command will convert any files in the current directory and subdirectories.\
-   It will extract zips in a folder and convert their files(directory and subdirectories).
+1. The following command will convert all supported files in the current directory and its subdirectories.\
+   It will also extract any .zip files into a folder and convert their contents(including files in subdirectories).
     ```bash
    python3 main.py
    ```
@@ -42,9 +45,9 @@ There are 2 commands:
    </table>
 
 
-3. You can decide to only send already converted PDFs files using the argument "-send-only".
-   This following command will look for any PDFs files in the current directory and subdirectories.\
-   It will extract files from zips to look for PDFs files.
+3. You can choose to only send already converted PDF files by using the ```-send-only``` argument.\
+   This command will search for all PDF files in the current directory and its subdirectories.\
+   It will also extract .zip files to look for PDFs inside them.
    ```bash
    python3 main.py -send-only
    ```
@@ -57,8 +60,8 @@ There are 2 commands:
    </table>
 
 ## Note: 
-- This script extracts a zip in a folder of the same name, if a folder already exists the programm stops.
-- If you convert a file and a PDF of the same name already exists, your PDF will be overwritten with the new converted PDF file.
+- This script extracts .zip files into folders with the same name. If a folder with that name already exists, the program will stop.
+- If a file is converted and a PDF with the same name already exists, the existing PDF will be overwritten by the newly converted file.
 <table>
    <tr>
       <td valign="middle"><img src="https://github.com/01MI/convert-and-send-pdf-files-to-goodnotes-email/assets/151965188/a22a93cb-40cc-46d4-a7ed-a8dd95f00a78"></td>
@@ -67,9 +70,9 @@ There are 2 commands:
 
 ## Conversion formats
 
-Here are the following input formats supported by this script:\
+Here are the input formats supported by this script:\
 For Img2pdf:\
-Table of input formats from https://pypi.org/project/img2pdf/ : 
+Table of supported input formats from https://pypi.org/project/img2pdf/ : 
 <table>
    <tr>
       <td valign="middle"><img src="https://github.com/01MI/convert-and-send-pdf-files-to-goodnotes-email/assets/151965188/f4ec4b68-a10d-450f-b7b2-532dcc7aeb69"></td>
@@ -77,7 +80,7 @@ Table of input formats from https://pypi.org/project/img2pdf/ :
 </table>
 
 For Pandoc:\
-Table of input formats from Pandoc User's Guide https://pandoc.org/MANUAL.html :
+Table of supported input formats from Pandoc User's Guide https://pandoc.org/MANUAL.html :
 <table>
    <tr>
       <td valign="middle"><img src="https://github.com/01MI/convert-and-send-pdf-files-to-goodnotes-email/assets/151965188/cd66ed21-a0fe-418e-ae96-409860ff0fdf"></td>
@@ -88,9 +91,9 @@ Table of input formats from Pandoc User's Guide https://pandoc.org/MANUAL.html :
 
 ## To do
 
-1. Support for other email providers.
-2. Support for other types of archives, currently it only supports .zip.
-3. Support for nested archives.
+1. Add support for other email providers.
+2. Implement support for more archive formats, only .zip files are currently supported.
+3. Add support for nested archives.
 
 
 
